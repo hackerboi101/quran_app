@@ -1,16 +1,7 @@
 # quran_app
 
-A new Flutter project.
+This is a flutter app
 
-## Getting Started
+## App Description
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This is a Quran app which fetches surah verse key, first ayah of the surah and the translation of that from an API and shows it to the user's screen in listview card tiles. It has offline support.
