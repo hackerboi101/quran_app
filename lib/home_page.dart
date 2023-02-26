@@ -7,6 +7,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class QuranController extends GetxController {
   var quran = Quran().obs;
@@ -104,6 +105,42 @@ class QuranApp extends StatelessWidget {
                   },
                 ),
               ),
+      ),
+      bottomNavigationBar: Container(
+        margin: EdgeInsets.all(0),
+        padding: EdgeInsets.all(5),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+          color: Colors.blueGrey[200],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0),
+          child: GNav(
+            backgroundColor: Color.fromARGB(255, 176, 190, 197),
+            color: Colors.blueGrey[500],
+            activeColor: Colors.white,
+            tabBackgroundColor: Color.fromRGBO(96, 125, 139, 1),
+            gap: 8,
+            onTabChange: (index) {
+              print(index);
+            },
+            padding: EdgeInsets.all(10),
+            tabs: [
+              GButton(
+                icon: Icons.home,
+                text: 'Home',
+              ),
+              GButton(
+                icon: Icons.favorite,
+                text: 'Favorites',
+              ),
+              GButton(
+                icon: Icons.settings,
+                text: 'Settings',
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
